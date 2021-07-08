@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "997843506476",
+    "project_id": "kuesio",
+    "storage_bucket": "kuesio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997843506476:android:c967bd3e46ada5c0abc889",
+        "android_client_info": {
+          "package_name": "com.ziesapp.kuesionerin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997843506476-8gr9qs25uhi0990fo1q1jrie1betbsv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ziesapp.kuesionerin",
+            "certificate_hash": "775210763e35f267393bee2a5bb265d25dbddc45"
+          }
+        },
+        {
+          "client_id": "997843506476-98j0lttcodmkl2n541h1004gnk6v9j3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOinU_E569bmB4D48ThQFbYYN3h1P9lqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997843506476-98j0lttcodmkl2n541h1004gnk6v9j3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
