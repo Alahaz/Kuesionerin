@@ -17,13 +17,12 @@ class MainActivity : AppCompatActivity() {
 
 
         supportActionBar!!.elevation = 0F
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.rvMain.setHasFixedSize(true)
         list.addAll(getListData())
-        showRecyler()
+        showRecycler()
     }
 
     private fun getListData(): Collection<Item> {
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         return listItem
     }
 
-    private fun showRecyler() {
+    private fun showRecycler() {
         binding.rvMain.layoutManager = LinearLayoutManager(this)
         val itemAdapter = ItemAdapter(list)
         binding.rvMain.adapter = itemAdapter
