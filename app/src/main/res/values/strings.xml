@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Kuesionerin</string>
+
+    <string-array name="data_title">
+        <item>Perilaku Konsumen bubur ayam di Daerah Istimewa Yogyakarta</item>
+        <item>Participants Needed</item>
+        <item>BANTU SKRIPSI ALIEF </item>
+        <item>Hubungan antara Laki-Laki dan Perempuan di Masyarakat</item>
+        <item>Hubungan antara Kecemasan Sosial dan Perilaku Makan pada Remaja</item>
+        <item>Keputusan pembelian di marketplace Tokopedia</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Perkenalkan, kami mahasiswa semester dua prodi S1 Ilmu Komunikasi UPN "Veteran" Yogyakarta yang saat ini sedang melakukan mini riset mengenai perilaku konsumen bubur ayam di Daerah Istimewa Yogyakarta untuk memenuhi tugas Ujian Akhir Semester. Kami mengharapkan kesediaan saudara/i meluangkan waktu untuk mengisi kuesioner berikut. Identitas dan jawaban saudara/i akan dijamin kerahasiannya dan semata-mata hanya untuk tujuan penelitian.</item>
+        <item>Perkenalkan saya Rayhan Salsabila, mahasiswa S1 Jurusan Manajemen di Universitas Yarsi, sedang mencari responden untuk penelitian skripsi saya</item>
+        <item>Perkenalkan saya Tiara Nur Rizka, mahasiswa S1 Manajemen, FEB UGM. Saat ini saya sedang membutuhkan responen untuk penelitian skripsi. Jika anda memenuhi kriteria di atas, mohon bantuannya untuk mengisi kuesioner di bawah ini</item>
+        <item>Hallo, Aku Tiara. Saat ini sedang melakukan penelitian Tesis. Mohon bantuannya untuk mengisi link di bawah ini. Terimakasih.</item>
+        <item>Pernah menggunakan aplikasi/platform mental health. Contoh: Riliv, Ibunda.id, Pijar Psikologi, Halodoc, Alodokter, SehatQ, dll</item>
+        <item>Hai.. Saya sofi, saat ini saya sedang melakukan penelitian tugas akhir mengenai keputusan pembelian pada marketplace Tokopedia. Saya membutuhkan data tanggapan anda untuk menjadi sumber data guna menyelesaikan penelitian ini. Apabila anda memenuhi kriteria, saya mohon kesediannya untuk mengisi kuesioner penelitian ini.</item>
+    </string-array>
+
+    <string-array name="data_link">
+        <item>bit.ly/penelitianrayhan</item>
+        <item>bit.ly/FestivalBelanjaDaring</item>
+        <item>bit.ly/TesisTiara</item>
+        <item>bit.ly/SKRIPSICINTYA</item>
+        <item>bit.ly/AKUBISALULUS2021</item>
+        <item>bit.ly/SUKSESSKRIPSIALIP</item>
+    </string-array>
+</resources>
