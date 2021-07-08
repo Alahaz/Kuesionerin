@@ -2,15 +2,22 @@ package com.ziesapp.kuesionerin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.ziesapp.kuesionerin.adapter.ItemAdapter
 import com.ziesapp.kuesionerin.data.Item
 import com.ziesapp.kuesionerin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    //RecyclerView
     private lateinit var binding: ActivityMainBinding
     private val list = ArrayList<Item>()
+
+    //Firebase
+    private var db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,30 +28,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.rvMain.setHasFixedSize(true)
-        list.addAll(getListData())
-        showRecycler()
+        getListData()
     }
 
-    private fun getListData(): Collection<Item> {
-        val dataTitle = resources.getStringArray(R.array.data_title)
-        val dataDesc = resources.getStringArray(R.array.data_description)
-        val dataLink = resources.getStringArray(R.array.data_link)
-
-        val listItem = ArrayList<Item>()
-        for(position in dataTitle.indices){
-            val item = Item(
-                dataTitle[position],
-                dataDesc[position],
-                dataLink[position]
-            )
-            listItem.add(item)
-        }
-        return listItem
-    }
-
-    private fun showRecycler() {
-        binding.rvMain.layoutManager = LinearLayoutManager(this)
-        val itemAdapter = ItemAdapter(list)
-        binding.rvMain.adapter = itemAdapter
+    private fun getListData() {
+        db.collection("items")
+            .get()
+            .addOnSuccessListener {
+                list.clear()
+                for (snapshot in it) {
+                    list.add(
+                        (
+                                Item(
+                                    snapshot.data["title"] as String,
+                                    snapshot.data["description"] as String,
+                                    snapshot.data["link"] as String
+                                ))
+                    )
+                }
+                val itemAdapter = ItemAdapter(list)
+                binding.rvMain.setHasFixedSize(true)
+                binding.rvMain.layoutManager = LinearLayoutManager(this)
+                binding.rvMain.adapter = itemAdapter
+            }
+            .addOnFailureListener {
+                Log.v("inilog", "Gagal mengambil data")
+            }
     }
 }
