@@ -1,5 +1,6 @@
 package com.ziesapp.kuesionerin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvMain.setHasFixedSize(true)
         getListData()
+
+        binding.fabAdd.setOnClickListener {
+            startActivity(Intent(this,AddActivity::class.java))
+        }
     }
 
     private fun getListData() {
